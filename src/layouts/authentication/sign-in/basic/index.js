@@ -54,6 +54,33 @@ function Basic() {
 
   const handleSetRememberMe = () => setRememberMe(!rememberMe);
 
+  // const handleLogin = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const response = await axios.post("http://localhost:8000/api/authenticate", {
+  //       email,
+  //       password,
+  //     });
+
+  //     const token = response.data.access_token;
+      
+  //     // Fetch user data
+  //     const userResponse = await axios.get("http://localhost:8000/api/user", {
+  //       headers: {
+  //         Authorization: `Bearer ${token}`
+  //       }
+  //     });
+
+  //     // Update context and localStorage
+  //     login(userResponse.data, token);
+
+  //     navigate("/dashboards/smart-home"); 
+  //   } catch (error) {
+  //     console.log(error);
+  //     setError("Login failed. Please check your credentials and try again.");
+  //   }
+  // };
+
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
@@ -61,13 +88,15 @@ function Basic() {
         email,
         password,
       });
+      
+      const token = response.data.access_token;
 
-      localStorage.setItem("token", response.data.access_token);
+      localStorage.setItem("token", token);
       
       // Fetch user data and update context
       const userResponse = await axios.get("http://localhost:8000/api/user", {
         headers: {
-          Authorization: `Bearer ${response.data.access_token}`
+          Authorization: `Bearer ${token}`
         }
       });
       
@@ -78,6 +107,7 @@ function Basic() {
       setError("Login failed. Please check your credentials and try again.");
     }
   };
+
 
   return (
     <BasicLayout image={bgImage}>

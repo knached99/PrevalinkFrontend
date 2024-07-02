@@ -1,5 +1,5 @@
 // src/api/auth.js
-import axios from './axios'; // Import the configured axios instance
+import axios from './api'; // Import the configured axios instance
 
 export const getAuthUser = async () => {
   try {

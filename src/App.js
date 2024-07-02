@@ -20,6 +20,7 @@ import brandDark from "assets/images/logo-ct-dark.png";
 import "assets/css/nucleo-icons.css";
 import "assets/css/nucleo-svg.css";
 import ProtectedRoute from "components/ProtectedRoute"; 
+import { useAuth } from 'context/AuthContext';  // Import the useAuth hook
 
 export default function App() {
   const [controller, dispatch] = useArgonController();
@@ -28,6 +29,7 @@ export default function App() {
   const [onMouseEnter, setOnMouseEnter] = useState(false);
   const [rtlCache, setRtlCache] = useState(null);
   const { pathname } = useLocation();
+  const { user, loading } = useAuth();  // Destructure user and loading from useAuth
 
   useMemo(() => {
     const cacheRtl = createCache({
@@ -110,6 +112,10 @@ export default function App() {
     </ArgonBox>
   );
 
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
   return direction === "rtl" ? (
     <CacheProvider value={rtlCache}>
       <ThemeProvider theme={darkMode ? themeDarkRTL : themeRTL}>
@@ -131,7 +137,7 @@ export default function App() {
         {layout === "vr" && <Configurator />}
         <Routes>
           {getRoutes(routes)}
-          <Route path="*" element={<Navigate to="/dashboards/default" />} />
+          <Route path="*" element={<Navigate to={user ? "/dashboards/default" : "/authentication/sign-in/basic"} />} />
         </Routes>
       </ThemeProvider>
     </CacheProvider>
@@ -155,7 +161,7 @@ export default function App() {
       {layout === "vr" && <Configurator />}
       <Routes>
         {getRoutes(routes)}
-        <Route path="*" element={<Navigate to="/dashboards/landing" />} />
+        <Route path="*" element={<Navigate to={user ? "/dashboards/landing" : "/authentication/sign-in/basic"} />} />
       </Routes>
     </ThemeProvider>
   );
