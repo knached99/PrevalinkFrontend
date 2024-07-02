@@ -22,6 +22,7 @@ import Divider from "@mui/material/Divider";
 // Argon Dashboard 2 PRO MUI components
 import ArgonBox from "components/ArgonBox";
 import ArgonTypography from "components/ArgonTypography";
+import { useAuth } from 'context/AuthContext'; // Import the useAuth hook
 
 // Argon Dashboard 2 PRO MUI example components
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
@@ -66,7 +67,7 @@ function SmartHome() {
   const [airConditionerState, setAirConditionerState] = useState(false);
   const [lightsStata, setLightsStata] = useState(false);
   const [wifiState, setWifiState] = useState(true);
-
+  const {user} = useAuth(); 
   return (
     <DashboardLayout>
       <DashboardNavbar />
@@ -75,6 +76,7 @@ function SmartHome() {
           <Grid container spacing={3}>
             <Grid item xs={12} xl={7}>
               <Cameras />
+
             </Grid>
             <Grid item xs={12} xl={5}>
               <Grid container spacing={3}>
@@ -83,7 +85,7 @@ function SmartHome() {
                     color="white"
                     title="weather today"
                     weather={{ location: "San Francisco", degree: 29 }}
-                    icon={{ component: iconSunCloud, text: "cloudy" }}
+                    icon={{ component: iconSunCloud, text: "Partly Cloudy" }}
                   />
                 </Grid>
                 <Grid item xs={12} md={6}>

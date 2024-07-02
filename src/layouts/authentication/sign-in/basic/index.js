@@ -84,29 +84,36 @@ function Basic() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
+      // First, get the CSRF token
+      await axios.get("http://localhost:8000/sanctum/csrf-cookie");
+  
+      // Then, authenticate the user
       const response = await axios.post("http://localhost:8000/api/authenticate", {
         email,
         password,
       });
-      
+  
       const token = response.data.access_token;
-
+  
       localStorage.setItem("token", token);
-      
+  
       // Fetch user data and update context
       const userResponse = await axios.get("http://localhost:8000/api/user", {
         headers: {
           Authorization: `Bearer ${token}`
-        }
+        },
+        withCredentials: true,
       });
-      
+  
+  
       setUser(userResponse.data);
-
-      navigate("/dashboards/smart-home"); 
+  
+      navigate("/dashboards/smart-home");
     } catch (error) {
       setError("Login failed. Please check your credentials and try again.");
     }
   };
+  
 
 
   return (
