@@ -58,6 +58,7 @@ import {
 // Images
 import team2 from "assets/images/team-2.jpg";
 import logoSpotify from "assets/images/small-logos/logo-spotify.svg";
+import LogoutButton from "components/LogoutButton";
 
 function DashboardNavbar({ absolute, light, isMini }) {
   const [navbarType, setNavbarType] = useState();
@@ -189,6 +190,8 @@ function DashboardNavbar({ absolute, light, isMini }) {
                   </ArgonTypography>
                 </IconButton>
               </Link>
+
+              <LogoutButton/>
               <IconButton
                 size="small"
                 color={light && transparentNavbar ? "white" : "dark"}

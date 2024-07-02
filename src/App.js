@@ -21,6 +21,8 @@ import "assets/css/nucleo-icons.css";
 import "assets/css/nucleo-svg.css";
 import ProtectedRoute from "components/ProtectedRoute"; 
 import { useAuth } from 'context/AuthContext';  // Import the useAuth hook
+import Stack from '@mui/material/Stack';
+import CircularProgress from '@mui/material/CircularProgress';
 
 export default function App() {
   const [controller, dispatch] = useArgonController();
@@ -113,7 +115,11 @@ export default function App() {
   );
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <Stack sx={{ color: 'white' }} spacing={2} direction="row">
+      <CircularProgress color="success" />
+    </Stack>
+    )
   }
 
   return direction === "rtl" ? (
