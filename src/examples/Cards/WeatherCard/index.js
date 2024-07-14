@@ -50,7 +50,7 @@ function WeatherCard({ color, title, weather, icon }) {
               fontWeight="medium"
               opacity={0.7}
             >
-             <h1 style={{fontSize: 20, color: '#000'}}> {title} </h1>
+             <h1 style={{fontSize: 20, color: 'inherit'}}> {title} </h1>
             </ArgonTypography>
             <ArgonTypography
               variant="h5"
