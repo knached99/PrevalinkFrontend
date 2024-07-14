@@ -83,7 +83,7 @@ function SmartHome() {
                 <Grid item xs={12}>
                   <WeatherCard
                     color="white"
-                    title="weather today"
+                    title={`Weather today in ${user.name}'s area`}
                     weather={{ location: "San Francisco", degree: 29 }}
                     icon={{ component: iconSunCloud, text: "Partly Cloudy" }}
                   />
