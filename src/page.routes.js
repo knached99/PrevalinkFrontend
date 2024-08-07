@@ -211,6 +211,12 @@ const pageRoutes = [
             name: "basic",
             route: "/authentication/sign-in/basic",
           },
+
+          {
+            name: "Email Verification",
+            route: "/authentication/verification/email-verification/:uuid",
+          },
+
           {
             name: "cover",
             route: "/authentication/sign-in/cover",

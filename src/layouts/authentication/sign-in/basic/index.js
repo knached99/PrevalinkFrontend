@@ -105,14 +105,31 @@ function Basic() {
         withCredentials: true,
       });
   
-  
       setUser(userResponse.data);
   
       navigate("/dashboards/smart-home");
     } catch (error) {
-      setError("Login failed. Please check your credentials and try again.");
+      if (error.response) {
+        console.log('Error response:', error.response); // Log the response for debugging
+  
+        // Check if the user needs email verification
+        if (error.response.status === 403 && error.response.data.verification_url) {
+          console.log('Redirecting to verification URL:', error.response.data.verification_url); // Log the URL
+          navigate(error.response.data.verification_url); // Redirect to the verification URL
+        } else {
+          // Handle other errors
+          setError(error.response.data.message || error.response.data);
+        }
+      } else if (error.request) {
+        // The request was made but no response was received
+        setError("No response received from server.");
+      } else {
+        // Something happened in setting up the request that triggered an Error
+        setError(error.message);
+      }
     }
   };
+  
   
 
 

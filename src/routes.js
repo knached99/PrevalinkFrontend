@@ -75,6 +75,7 @@ import OrderList from "layouts/ecommerce/orders/order-list";
 import OrderDetails from "layouts/ecommerce/orders/order-details";
 import Referral from "layouts/ecommerce/referral";
 import SignInBasic from "layouts/authentication/sign-in/basic";
+import EmailVerification from "layouts/authentication/verification";
 import SignInCover from "layouts/authentication/sign-in/cover";
 import SignInIllustration from "layouts/authentication/sign-in/illustration";
 import SignUpBasic from "layouts/authentication/sign-up/basic";
@@ -395,6 +396,14 @@ const routes = [
             route: "/authentication/sign-in/basic",
             component: <SignInBasic />,
           },
+
+          {
+            name: "Email Verification",
+            key: 'email-verification',
+            route: "/authentication/verification/email-verification/:uuid",
+            component: <EmailVerification />,
+          },
+
           {
             name: "Cover",
             key: "cover",
