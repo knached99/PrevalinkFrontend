@@ -1,19 +1,3 @@
-/* eslint-disable no-unused-vars */
-/**
-=========================================================
-* Argon Dashboard 2 PRO MUI - v3.0.1
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard-pro-mui
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 // @mui material components
 import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
@@ -27,10 +11,14 @@ import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import Footer from "examples/Footer";
 import DetailedStatisticsCard from "examples/Cards/StatisticsCards/DetailedStatisticsCard";
+import PrevalinkCardMini from "examples/Cards/StatisticsCards/PrevalinkCardMini";
+
 import SalesTable from "examples/Tables/SalesTable";
 import Table from "examples/Tables/Table";
 import CategoriesList from "examples/Lists/CategoriesList";
 import GradientLineChart from "examples/Charts/LineCharts/GradientLineChart";
+import PlaceholderCard from "examples/Cards/PlaceholderCard";
+
 
 // Argon Dashboard 2 PRO MUI base styles
 import typography from "assets/theme/base/typography";
@@ -62,51 +50,56 @@ function Default() {
       <ArgonBox py={3}>
         <Grid container spacing={3} mb={3}>
           <Grid item xs={12} md={6} lg={3}>
-            <DetailedStatisticsCard
-              title="today's money"
-              count="$53,000"
-              icon={{ color: "info", component: <i className="ni ni-money-coins" /> }}
-              percentage={{ color: "success", count: "+55%", text: "since yesterday" }}
+            <PrevalinkCardMini
+              title="Visits"
+              count="231"
+              icon={{ color: "primary", component: <i className="ni ni-world" /> }}
+              percentage={{ color: "success", count: "+7%", text: "from last weeek" }}
             />
           </Grid>
           <Grid item xs={12} md={6} lg={3}>
-            <DetailedStatisticsCard
-              title="today's users"
-              count="2,300"
-              icon={{ color: "error", component: <i className="ni ni-world" /> }}
-              percentage={{ color: "success", count: "+3%", text: "since last week" }}
+            <PrevalinkCardMini
+              title="Visitors"
+              count="189"
+              icon={{ color: "primary", component: <i className="ni ni-single-02" /> }}
+              percentage={{ color: "success", count: "+724", text: "from last month" }}
             />
           </Grid>
           <Grid item xs={12} md={6} lg={3}>
-            <DetailedStatisticsCard
-              title="new clients"
-              count="+3,462"
-              icon={{ color: "success", component: <i className="ni ni-paper-diploma" /> }}
-              percentage={{ color: "error", count: "-2%", text: "since last quarter" }}
+            <PrevalinkCardMini
+              title="Click-Throughs"
+              count="73"
+              icon={{ color: "primary", component: <i className="ni ni-active-40" /> }}
+              percentage={{ color: "error", count: "-2%", text: "from last week" }}
             />
           </Grid>
           <Grid item xs={12} md={6} lg={3}>
-            <DetailedStatisticsCard
-              title="sales"
-              count="$103,430"
-              icon={{ color: "warning", component: <i className="ni ni-cart" /> }}
-              percentage={{ color: "success", count: "+5%", text: "than last month" }}
+            <PrevalinkCardMini
+              title="New Followers"
+              count="12"
+              icon={{ color: "error", component: <i className="ni ni-fat-add" /> }}
+              percentage={{ color: "success", count: "+53", text: "from last week" }}
             />
           </Grid>
         </Grid>
-        <Grid container spacing={3} mb={3}>
+        <Grid container spacing={12} mb={4}>
+          <Grid item xs={12} sm={12}>
+            <PlaceholderCard title={{ variant: "h6", text: "Create new page" }} hasBorder />
+          </Grid>
+        </Grid>
+        {/* <Grid container spacing={3} mb={3}>
           <Grid item xs={12} lg={7}>
             <GradientLineChart
-              title="Sales Overview"
+              title="Weekly Views"
               description={
                 <ArgonBox display="flex" alignItems="center">
                   <ArgonBox fontSize={size.lg} color="success" mb={0.3} mr={0.5} lineHeight={0}>
                     <Icon sx={{ fontWeight: "bold" }}>arrow_upward</Icon>
                   </ArgonBox>
                   <ArgonTypography variant="button" color="text" fontWeight="medium">
-                    4% more{" "}
+                    12% more{" "}
                     <ArgonTypography variant="button" color="text" fontWeight="regular">
-                      in 2022
+                      in 2023
                     </ArgonTypography>
                   </ArgonTypography>
                 </ArgonBox>
@@ -117,8 +110,9 @@ function Default() {
           <Grid item xs={12} lg={5}>
             <Slider />
           </Grid>
-        </Grid>
-        <Grid container spacing={3} mb={3}>
+        </Grid> */}
+
+        {/* <Grid container spacing={3} mb={3}>
           <Grid item xs={12} md={6} lg={4}>
             <TeamMembers />
           </Grid>
@@ -128,8 +122,9 @@ function Default() {
           <Grid item xs={12} md={6} lg={4}>
             <ProgressTrack />
           </Grid>
-        </Grid>
-        <Grid container spacing={3} mb={3}>
+        </Grid> */}
+
+        {/* <Grid container spacing={3} mb={3}>
           <Grid item xs={12} lg={5}>
             <Post />
           </Grid>
@@ -163,8 +158,8 @@ function Default() {
               <SalesTable title="Sales by Country" rows={salesTableData} />
             </Grid>
           </Grid>
-        </Grid>
-        <Grid container spacing={3}>
+        </Grid> */}
+        {/* <Grid container spacing={3}>
           <Grid item xs={12} md={8}>
             <ArgonBox
               sx={{
@@ -182,7 +177,7 @@ function Default() {
           <Grid item xs={12} md={4}>
             <CategoriesList title="categories" categories={categoriesListData} />
           </Grid>
-        </Grid>
+        </Grid> */}
       </ArgonBox>
       <Footer />
     </DashboardLayout>

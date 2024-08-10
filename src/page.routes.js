@@ -61,18 +61,6 @@ const pageRoutes = [
             name: "automotive",
             route: "/dashboards/automotive",
           },
-          {
-            name: "VR Default",
-            route: "/dashboards/virtual-reality/default",
-          },
-          {
-            name: "VR Info",
-            route: "/dashboards/virtual-reality/info",
-          },
-          {
-            name: "crm",
-            route: "/dashboards/crm",
-          },
         ],
       },
       {
@@ -409,35 +397,35 @@ const pageRoutes = [
       },
     ],
   },
-  {
-    name: "docs",
-    collapse: [
-      {
-        name: "getting started",
-        href: "https://www.creative-tim.com/learning-lab/material-ui/quick-start/argon-dashboard/",
-        description: "All about overview, quick start, license and contents",
-        icon: <ArgonBox component="i" color="info" className="ni ni-planet" />,
-      },
-      {
-        name: "foundation",
-        href: "https://www.creative-tim.com/learning-lab/material-ui/colors/argon-dashboard/",
-        description: "See our colors, icons and typography",
-        icon: <ArgonBox component="i" color="info" className="ni ni-single-copy-04" />,
-      },
-      {
-        name: "components",
-        href: "https://www.creative-tim.com/learning-lab/material-ui/alerts/argon-dashboard/",
-        description: "Explore our collection of fully designed components",
-        icon: <ArgonBox component="i" color="info" className="ni ni-app" />,
-      },
-      {
-        name: "plugins",
-        href: "https://www.creative-tim.com/learning-lab/material-ui/datepicker/argon-dashboard/",
-        description: "Check how you can integrate our plugins",
-        icon: <ArgonBox component="i" color="info" className="ni ni-chart-bar-32" />,
-      },
-    ],
-  },
+  // {
+  //   name: "docs",
+  //   collapse: [
+  //     {
+  //       name: "getting started",
+  //       href: "https://www.creative-tim.com/learning-lab/material-ui/quick-start/argon-dashboard/",
+  //       description: "All about overview, quick start, license and contents",
+  //       icon: <ArgonBox component="i" color="info" className="ni ni-planet" />,
+  //     },
+  //     {
+  //       name: "foundation",
+  //       href: "https://www.creative-tim.com/learning-lab/material-ui/colors/argon-dashboard/",
+  //       description: "See our colors, icons and typography",
+  //       icon: <ArgonBox component="i" color="info" className="ni ni-single-copy-04" />,
+  //     },
+  //     {
+  //       name: "components",
+  //       href: "https://www.creative-tim.com/learning-lab/material-ui/alerts/argon-dashboard/",
+  //       description: "Explore our collection of fully designed components",
+  //       icon: <ArgonBox component="i" color="info" className="ni ni-app" />,
+  //     },
+  //     {
+  //       name: "plugins",
+  //       href: "https://www.creative-tim.com/learning-lab/material-ui/datepicker/argon-dashboard/",
+  //       description: "Check how you can integrate our plugins",
+  //       icon: <ArgonBox component="i" color="info" className="ni ni-chart-bar-32" />,
+  //     },
+  //   ],
+  // },
 ];
 
 export default pageRoutes;

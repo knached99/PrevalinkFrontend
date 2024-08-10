@@ -1,18 +1,3 @@
-/**
-=========================================================
-* Argon Dashboard 2 PRO MUI - v3.0.1
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard-pro-mui
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
@@ -67,12 +52,11 @@ function Footer({ company, links }) {
           </Icon>
         </ArgonBox>
         by
-        <Link href={href} target="_blank">
+        <Link href="https://www.eastrockent.com/" target="_blank">
           <ArgonTypography variant="button" fontWeight="medium">
-            &nbsp;{name}&nbsp;
+            &nbsp;East Rock&nbsp;
           </ArgonTypography>
         </Link>
-        for a better web.
       </ArgonBox>
       <ArgonBox
         component="ul"
@@ -99,12 +83,12 @@ function Footer({ company, links }) {
 
 // Setting default values for the props of Footer
 Footer.defaultProps = {
-  company: { href: "https://www.creative-tim.com/", name: "Creative Tim" },
+  company: { href: "https://www.eastrockent.com", name: "PrevaLink" },
   links: [
-    { href: "https://www.creative-tim.com/", name: "Creative Tim" },
-    { href: "https://www.creative-tim.com/presentation", name: "About Us" },
-    { href: "https://www.creative-tim.com/blog", name: "Blog" },
-    { href: "https://www.creative-tim.com/license", name: "License" },
+    { href: "#", name: "PrevaLink" },
+    { href: "#", name: "About Us" },
+    { href: "#", name: "Blog" },
+    { href: "#", name: "License" },
   ],
 };
 

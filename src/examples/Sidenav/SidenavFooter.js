@@ -34,7 +34,7 @@ function SidenavFooter() {
   return (
     <ArgonBox opacity={miniSidenav ? 0 : 1} sx={{ transition: "opacity 200ms linear" }}>
       <ArgonBox position="relative" textAlign="center">
-        <ArgonBox component="img" src={icon} alt="sidebar_illustration" width="60%" />
+        {/* <ArgonBox component="img" src={icon} alt="sidebar_illustration" width="60%" /> */}
         <ArgonBox
           width="100%"
           pb={2}
@@ -44,15 +44,15 @@ function SidenavFooter() {
           lineHeight={0}
         >
           <ArgonTypography color="inherit" variant="h6">
-            Need help?
+            Current Plan
           </ArgonTypography>
           <ArgonTypography color="inherit" variant="caption">
-            Please check our docs
+            Starter
           </ArgonTypography>
         </ArgonBox>
       </ArgonBox>
       <ArgonBox display="flex" flexDirection="column">
-        <ArgonButton
+        {/* <ArgonButton
           component={Link}
           href="https://www.creative-tim.com/learning-lab/material-ui/overview/argon-dashboard/"
           target="_blank"
@@ -62,11 +62,11 @@ function SidenavFooter() {
           fullWidth
           sx={{ mb: 1 }}
         >
-          Documentation
-        </ArgonButton>
+          Plan: Starter
+        </ArgonButton> */}
         <ArgonButton
           component={Link}
-          href="https://www.creative-tim.com/product/argon-dashboard-pro-material-ui"
+          href="#"
           target="_blank"
           rel="noreferrer"
           color="info"
@@ -74,7 +74,7 @@ function SidenavFooter() {
           fullWidth
           mb={2}
         >
-          Buy Now
+          Upgrade Plan
         </ArgonButton>
       </ArgonBox>
     </ArgonBox>

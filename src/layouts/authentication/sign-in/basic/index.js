@@ -114,8 +114,6 @@ function Basic() {
     }
   };
   
-
-
   return (
     <BasicLayout image={bgImage}>
       <Card>

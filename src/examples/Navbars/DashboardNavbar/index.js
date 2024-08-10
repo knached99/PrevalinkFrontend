@@ -149,27 +149,27 @@ function DashboardNavbar({ absolute, light, isMini }) {
           mb={{ xs: 1, md: 0 }}
           sx={(theme) => navbarRow(theme, { isMini })}
         >
-          <Breadcrumbs
+          {/* <Breadcrumbs
             icon="home"
             title={route[route.length - 1]}
             route={route}
             light={transparentNavbar ? light : false}
-          />
-          <Icon fontSize="medium" sx={navbarDesktopMenu} onClick={handleMiniSidenav}>
+          /> */}
+          {/* <Icon fontSize="medium" sx={navbarDesktopMenu} onClick={handleMiniSidenav}>
             {miniSidenav ? "menu_open" : "menu"}
-          </Icon>
+          </Icon> */}
         </ArgonBox>
         {isMini ? null : (
           <ArgonBox sx={(theme) => navbarRow(theme, { isMini })}>
             <ArgonBox pr={1}>
-              <ArgonInput
+              {/* <ArgonInput
                 placeholder="Type here..."
                 startAdornment={
                   <Icon fontSize="small" style={{ marginRight: "6px" }}>
                     search
                   </Icon>
                 }
-              />
+              /> */}
             </ArgonBox>
             <ArgonBox color={light ? "white" : "inherit"}>
               <Link to="/authentication/sign-in/basic">

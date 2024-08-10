@@ -213,9 +213,9 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
           </ArgonTypography>
         </ArgonBox>
         <ArgonBox component={NavLink} to="/" display="flex" alignItems="center">
-          {brand && (
+          {/* {brand && (
             <ArgonBox component="img" src={brand} alt="Argon Logo" width="2rem" mr={0.25} />
-          )}
+          )} */}
           <ArgonBox
             width={!brandName && "100%"}
             sx={(theme) => sidenavLogoLabel(theme, { miniSidenav })}
