@@ -59,6 +59,20 @@ const routes = [
       },
     ],
     },
+
+    {
+      name: "Sign Up",
+      key: "sign-up",
+      collapse: [
+        {
+          name: "Basic",
+          key: "basic",
+          route: "/authentication/sign-up/basic",
+          component: <SignUpBasic />,
+        },
+      ],
+      },
+
   {
     type: "collapse",
     name: "Home",
