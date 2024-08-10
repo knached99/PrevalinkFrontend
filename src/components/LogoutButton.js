@@ -1,6 +1,7 @@
 import { Button } from "@mui/material";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import ArgonButton from "./ArgonButton";
 
 const LogoutButton = () => {
   const navigate = useNavigate();
@@ -28,9 +29,18 @@ const LogoutButton = () => {
   };
 
   return (
-    <Button onClick={handleLogout} variant="" sx={{color: 'inherit'}}>
-      Logout
-    </Button>
+    // <ArgonButton onClick={handleLogout} variant="" sx={{color: 'inherit'}}>
+    //   Logout
+    // </ArgonButton>
+
+      <ArgonButton            
+            rel="noreferrer"
+            variant="outlined"
+            fullWidth
+            onClick={handleLogout}
+          >
+            Log Out
+          </ArgonButton> 
   );
 };
 

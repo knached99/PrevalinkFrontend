@@ -108,7 +108,7 @@ function Basic() {
   
       setUser(userResponse.data);
   
-      navigate("/dashboards/smart-home");
+      navigate("/");
     } catch (error) {
       setError("Login failed. Please check your credentials and try again.");
     }

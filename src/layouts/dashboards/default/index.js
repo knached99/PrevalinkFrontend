@@ -19,7 +19,6 @@ import CategoriesList from "examples/Lists/CategoriesList";
 import GradientLineChart from "examples/Charts/LineCharts/GradientLineChart";
 import PlaceholderCard from "examples/Cards/PlaceholderCard";
 
-
 // Argon Dashboard 2 PRO MUI base styles
 import typography from "assets/theme/base/typography";
 
@@ -84,7 +83,7 @@ function Default() {
         </Grid>
         <Grid container spacing={12} mb={4}>
           <Grid item xs={12} sm={12}>
-            <PlaceholderCard title={{ variant: "h6", text: "Create new page" }} hasBorder />
+            <PlaceholderCard title={{ variant: "h6", text: 'Create New Page' }} hasBorder />
           </Grid>
         </Grid>
         {/* <Grid container spacing={3} mb={3}>
