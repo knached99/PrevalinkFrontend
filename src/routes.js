@@ -46,6 +46,19 @@ import ProtectedRoute from "components/ProtectedRoute";
 import ArgonBox from "components/ArgonBox";
 
 const routes = [
+
+  {
+    name: "Sign In",
+    key: "sign-in",
+    collapse: [
+      {
+        name: "Basic",
+        key: "basic",
+        route: "/authentication/sign-in/basic",
+        component: <SignInBasic />,
+      },
+    ],
+    },
   {
     type: "collapse",
     name: "Home",
