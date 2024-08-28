@@ -9,7 +9,8 @@ import { ArgonControllerProvider } from "context";
 // react-perfect-scrollbar component
 import PerfectScrollbar from "react-perfect-scrollbar";
 import { AuthProvider } from 'context/AuthContext';
-
+// create auth context here and pass it in globally
+// instead of on every page that needs auth data
 // react-perfect-scrollbar styles
 import "react-perfect-scrollbar/dist/css/styles.css";
 
